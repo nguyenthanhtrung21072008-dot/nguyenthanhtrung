@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ===== BACKGROUND ===== */
+.background {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/background_and_road.png');
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* ===== BIRD ===== */
+.bird {
+    position: absolute;
+    height: 50px;
+    top: 40vh;
+    left: 30vw;
+    z-index: 5;
+}
+
+/* ===== PIPE ===== */
+.pipe_sprite {
+    position: absolute;
+    width: 10vw;
+    height: 70vh;
+    background-image: url('images/pipes.png');
+    background-size: 100% 100%;
+}
+
+/* ===== UI ===== */
+.score {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    font-size: 5vh;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    z-index: 10;
+}
+
+.message {
+    position: fixed;
+    top: 40vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4vh;
+    color: white;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 10;
+    text-align: center;
+}
