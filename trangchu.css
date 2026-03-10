@@ -1,144 +1,330 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+/* Reset */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI', sans-serif;
 }
 
-body {
-    background-color: #1a1a1a;
-    color: white;
-}
 
-header {
-    background-color: #333;
-    padding: 15px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ff4757;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-}
-
-#searchBar {
-    padding: 8px;
-    border-radius: 5px;
+button.close-ad6 {
+    position: absolute;
+    width: 22px;
+    height: 22px;
     border: none;
-}
-
-/* Lưới Game */
-.game-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-    padding: 30px 5%;
-}
-
-.game-card {
-    background-color: #2f3542;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    font-size: 12px;
     cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.game-card:hover {
-    transform: scale(1.05);
-    background-color: #57606f;
-}
-
-.game-card img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-/* Màn hình chơi game */
-#player-screen {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 20px;
+    justify-content: center;
+    margin-top: 5px;
+    margin-right: 181px;
 }
 
-/* Ẩn hoàn toàn khu vực chơi game khi chưa bắt đầu */
-.hidden {
-    display: none !important;
-}
-
-/* Định dạng khung game cho đẹp */
-#gameFrame {
-    width: 800px;  /* Độ rộng cố định hoặc 90% */
-    height: 600px; /* Độ cao cố định */
-    background-color: #000; /* Nền đen để không bị chói mắt nếu game chưa load */
-    border: 3px solid #ff4757; /* Viền đỏ cho giống phong cách Y8 */
-    border-radius: 10px;
-    margin-top: 20px;
-}
-.back-btn {
-    align-self: flex-start;
-    margin-bottom: 10px;
-    padding: 10px 20px;
-    background: #ff4757;
-    color: white;
+button.close-ad5 {
+    position: absolute;
+    width: 22px;
+    height: 22px;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.hidden {
-    display: none;
-}
-
-.game-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.game-card {
-    background: #222;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    text-align: center;
+    border-radius: 50%;
+    background: red;
     color: white;
-    transition: 0.3s;
-}
-
-.game-card:hover {
-    transform: scale(1.05);
-    background: #444;
-}
-
-#gameFrame {
-    width: 90%;
-    height: 80vh;
-    border-radius: 10px;
-}
-
-.back-btn {
-    margin: 10px;
-    padding: 10px 20px;
+    font-size: 12px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+    margin-right: 181px;
+}
+
+button.close-ad4 {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border: none;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 181px;
+}
+
+button.close-ad3 {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border: none;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px;
+    margin-left: 181px;
+}
+
+.qc2 {
+    margin-top: 17px;
+}
+
+button.close-ad2 {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border: none;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -7px;
+    margin-left: 181px;
+}
+
+button.close-ad1 {
+    position: absolute;
+    width:22px;
+    height:22px;
+    border:none;
+    border-radius:50%;
+    background:red;
+    color:white;
+    font-size:12px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top: 21px;
+    margin-left: 181px;
+}
+
+body{
+background:#1a1a1a;
+color:white;
+}
+
+/* Layout 3 cột */
+.layout{
+display:grid;
+grid-template-columns:220px 1fr 220px;
+min-height:100vh;
+gap:20px;
+}
+
+/* Header */
+header{
+background:#333;
+padding:15px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#ff4757;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+}
+
+#searchBar{
+padding:8px;
+border-radius:5px;
+border:none;
+}
+
+/* Nội dung giữa */
+.main-content{
+padding:10px;
+}
+
+/* Lưới game */
+.game-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.game-card{
+background:#222;
+padding:10px;
+border-radius:10px;
+cursor:pointer;
+text-align:center;
+transition:0.3s;
+}
+
+.game-card:hover{
+transform:scale(1.05);
+background:#444;
+}
+
+.game-card img{
+width:100%;
+height:120px;
+object-fit:cover;
+border-radius:5px;
+}
+
+/* ========================= */
+/* QUẢNG CÁO */
+/* ========================= */
+
+.ads{padding:10px;margin-top: -6px;text-align:center;}
+
+.qc6 {
+    margin-top: 5px;
+}
+
+.qc5 {
+    margin-top: 5px;
+}
+
+.qc3 {
+    margin-top: 5px;
+}
+
+/* Khung từng quảng cáo */
+.ad-box{
+position:relative;
+margin-bottom:15px;
+}
+
+/* Nút đóng quảng cáo */
+.close-ad{
+position:absolute;
+top:5px;
+right:5px;
+width:22px;
+height:22px;
+border:none;
+border-radius:50%;
+background:red;
+color:white;
+font-size:12px;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.close-ad:hover{
+background:#ff4757;
+}
+
+.ads img{
+width:100%;
+border-radius:8px;
+object-fit:cover;
+}
+
+/* Kích thước quảng cáo */
+
+img.qc1{
+height:136px;
+margin-top:25px;
+}
+
+img.qc2{
+height:129px;
+margin-top:-6px;
+}
+
+img.qc3{
+height:129px;
+margin-top:8px;
+}
+
+img.qc4{
+height:129px;
+margin-top:14px;
+}
+
+img.qc5{
+height:129px;
+margin-top:6px;
+}
+
+img.qc6{
+height:306px;
+margin-top:6px;
+}
+
+/* ========================= */
+/* MÀN HÌNH CHƠI GAME */
+/* ========================= */
+
+#player-screen{
+width:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
+margin-top:20px;
+}
+
+/* Khung game */
+
+#gameFrame{
+width:1000px;
+height:600px;
+border:3px solid #ff4757;
+border-radius:10px;
+margin-top:20px;
+background:black;
+}
+
+/* Nút quay lại */
+
+.back-btn{
+align-self:flex-start;
+margin-bottom:10px;
+padding:10px 20px;
+background:#ff4757;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* Ẩn */
+
+.hidden{
+display:none !important;
+}
+
+/* Khóa cuộn khi chơi game */
+
+body.lock-scroll{
+overflow:hidden;
+height:100vh;
 }
